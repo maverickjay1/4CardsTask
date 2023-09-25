@@ -33,31 +33,17 @@ header p {
 }
 
 $themeCardLight: rgb(255, 255, 255);
-$cardDimensions: (
-  border-radius: 7px,
-  width: 300px,
-  margin: auto,
-  margin-bottom: 25px,
-  padding-left: 25px,
-  padding-right: 25px,
-  padding-bottom: 28px,
-);
+// $cardDimensions: (
+//   border-radius: 7px,
+//   width: 300px,
+//   margin: auto,
+//   margin-bottom: 25px,
+//   padding-left: 25px,
+//   padding-right: 25px,
+//   padding-bottom: 28px,
+// );
 
 @mixin cardDimension {
-  border-radius: 7px,
-  width: 300px,
-  margin: auto,
-  margin-bottom: 25px,
-  padding-left: 25px,
-  padding-right: 25px,
-  padding-bottom: 28px;
-}
-
-.card {
-  background-color: $themeCardLight; rgb(255, 255, 255);
-  @each $property, $value in $cardDimensions {
-    #{$property}: $value;
-  }
   border-radius: 7px;
   width: 300px;
   margin: auto;
@@ -66,55 +52,71 @@ $cardDimensions: (
   padding-right: 25px;
   padding-bottom: 28px;
   padding-top: 8px;
-  font-weight: lighter;}
+}
 
 .card {
-@include cardDimension;
-}
+  background-color: $themeCardLight; /*rgb(255, 255, 255);*/
+  // @each $property, $value in $cardDimensions {
+  //   #{$property}: $value;
+  // }
+  // border-radius: 7px;
+  // width: 300px;
+  // margin: auto;
+  // margin-bottom: 25px;
+  // padding-left: 25px;
+  // padding-right: 25px;
+  // padding-bottom: 28px;
+  // padding-top: 8px;
+  // font-weight: lighter;}
 
-@media (min-width: 1150px) {
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   .card {
-    margin-bottom: unset;
-    margin: 20px;
+    @include cardDimension;
   }
-  .outline {
-    width: 550px;
-    margin-bottom: 40px;
+
+  @media (min-width: 1150px) {
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .card {
+      margin-bottom: unset;
+      margin: 20px;
+    }
+    .outline {
+      width: 550px;
+      margin-bottom: 40px;
+    }
   }
-}
 
-.icon {
-  display: flex;
-  justify-content: flex-end;
-  padding: 2px;
-  padding-top: 16px;
-}
+  .icon {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2px;
+    padding-top: 16px;
+  }
 
-h1,
-h2,
-h3,
-p {
-  font-family: poppins, "Courier New", Courier, monospace;
-  color: #4d4f62;
-}
+  h1,
+  h2,
+  h3,
+  p {
+    font-family: poppins, "Courier New", Courier, monospace;
+    color: #4d4f62;
+  }
 
-.card.supervisor {
-  border-top: 3px solid #00c8c8;
-}
+  .card.supervisor {
+    border-top: 3px solid #00c8c8;
+  }
 
-.card.team-builder {
-  border-top: 3px solid #ff637b;
-}
+  .card.team-builder {
+    border-top: 3px solid #ff637b;
+  }
 
-.card.karma {
-  border-top: 3px solid #fdbf00;
-}
+  .card.karma {
+    border-top: 3px solid #fdbf00;
+  }
 
-.card.calculator {
-  border-top: 3px solid #377fd2;
+  .card.calculator {
+    border-top: 3px solid #377fd2;
+  }
 }
