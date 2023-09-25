@@ -52,6 +52,7 @@ $themeCardLight: rgb(255, 255, 255);
   padding-right: 25px;
   padding-bottom: 28px;
   padding-top: 8px;
+  font-weight: lighter;
 }
 
 .card {
@@ -68,55 +69,63 @@ $themeCardLight: rgb(255, 255, 255);
   // padding-bottom: 28px;
   // padding-top: 8px;
   // font-weight: lighter;}
+  @include cardDimension;
+}
 
-  .card {
-    @include cardDimension;
-  }
-
-  @media (min-width: 1150px) {
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .card {
-      margin-bottom: unset;
-      margin: 20px;
-    }
-    .outline {
-      width: 550px;
-      margin-bottom: 40px;
-    }
-  }
-
-  .icon {
+@media (min-width: 1150px) {
+  .container {
     display: flex;
-    justify-content: flex-end;
-    padding: 2px;
-    padding-top: 16px;
+    justify-content: center;
+    align-items: center;
   }
+  .card {
+    margin-bottom: unset;
+    margin: 20px;
+  }
+  .outline {
+    width: 550px;
+    margin-bottom: 40px;
+  }
+}
 
-  h1,
-  h2,
-  h3,
-  p {
-    font-family: poppins, "Courier New", Courier, monospace;
-    color: #4d4f62;
-  }
+%icon-position {
+  display: flex;
+  justify-content: flex-end;
+  padding: 2px;
+  padding-top: 16px;
+}
 
-  .card.supervisor {
-    border-top: 3px solid #00c8c8;
-  }
+.icon {
+  @extend %icon-position;
+}
 
-  .card.team-builder {
-    border-top: 3px solid #ff637b;
-  }
+// .icon {
+//   display: flex;
+//   justify-content: flex-end;
+//   padding: 2px;
+//   padding-top: 16px;
+// }
 
-  .card.karma {
-    border-top: 3px solid #fdbf00;
-  }
+h1,
+h2,
+h3,
+p {
+  font-family: poppins, "Courier New", Courier, monospace;
+  color: #4d4f62;
+}
 
-  .card.calculator {
-    border-top: 3px solid #377fd2;
-  }
+.card.supervisor {
+  border-top: 3px solid #00c8c8;
+}
+
+.card.team-builder {
+  border-top: 3px solid #ff637b;
+}
+
+.card.karma {
+  border-top: 3px solid #fdbf00;
+}
+
+.card.calculator {
+  border-top: 3px solid #377fd2;
 }

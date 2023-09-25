@@ -34,8 +34,6 @@ header p {
 
 .card {
   background-color: rgb(255, 255, 255); /*rgb(255, 255, 255);*/
-}
-.card .card {
   border-radius: 7px;
   width: 300px;
   margin: auto;
@@ -44,44 +42,51 @@ header p {
   padding-right: 25px;
   padding-bottom: 28px;
   padding-top: 8px;
+  font-weight: lighter;
 }
+
 @media (min-width: 1150px) {
-  .card .container {
+  .container {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .card .card {
+  .card {
     margin-bottom: unset;
     margin: 20px;
   }
-  .card .outline {
+  .outline {
     width: 550px;
     margin-bottom: 40px;
   }
 }
-.card .icon {
+.icon {
   display: flex;
   justify-content: flex-end;
   padding: 2px;
   padding-top: 16px;
 }
-.card h1,
-.card h2,
-.card h3,
-.card p {
+
+h1,
+h2,
+h3,
+p {
   font-family: poppins, "Courier New", Courier, monospace;
   color: #4d4f62;
 }
-.card .card.supervisor {
+
+.card.supervisor {
   border-top: 3px solid #00c8c8;
 }
-.card .card.team-builder {
+
+.card.team-builder {
   border-top: 3px solid #ff637b;
 }
-.card .card.karma {
+
+.card.karma {
   border-top: 3px solid #fdbf00;
 }
-.card .card.calculator {
+
+.card.calculator {
   border-top: 3px solid #377fd2;
 }/*# sourceMappingURL=general.css.map */
